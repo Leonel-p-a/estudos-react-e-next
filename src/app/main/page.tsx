@@ -1,20 +1,11 @@
-export function Accommodation() {
-    return (
-        <div>
-            <span>IMAGEM ACOMODAÇÃO</span>
-            <h1>Rio de Janeiro, Brasil</h1>
-            <p>Descrição: Perto do Cristo Redentor</p>
-        </div>
-    )
-}
+import { Accommodation, Header } from "@/components/interface"
 
 export default function Page() {
     return (
         <div>
-            {Accommodation()}
+            {Header()}
             <hr />
             {Accommodation()}
-            <hr />
         </div>
     )
 }
