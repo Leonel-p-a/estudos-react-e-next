@@ -8,10 +8,13 @@ export function Accommodation() {
     )
 }
 
-export function Header() {
+export function Header( props: any ) {
     return (
         <div className="bg-teal-600">
             <h1>Logo</h1>
+            <p>{props.title}</p>
+            <p>{props.description}</p>
+            <p>{props.price}</p>
             {Menu()}
         </div>
     )
