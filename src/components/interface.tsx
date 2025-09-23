@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function Accommodation() {
     return (
         <div>
@@ -11,11 +13,8 @@ export function Accommodation() {
 export function Header( props: any ) {
     return (
         <div className="bg-teal-600">
-            <h1>Logo</h1>
             <p>{props.title}</p>
-            <p>{props.description}</p>
-            <p>{props.price}</p>
-            {Menu()}
+            <p>{props.subtitle}</p>
         </div>
     )
 }
@@ -23,7 +22,33 @@ export function Header( props: any ) {
 export function Menu() {
     return (
         <div className="bg-teal-600">
-            Acododações | Experiências
+            <MenuItem text="Início" url="/home" />
+            <MenuItem text="Acomodações" url="/accomodations" />
+            <MenuItem text="Help" url="/home" />
+        </div>
+    )
+}
+
+export function MenuItem( props: any ) {
+    return (
+        <Link href={props.url} className="p-2">
+            {props.text}
+        </Link>
+    )
+}
+
+export function Footer() {
+    return (
+        <div className="bg-teal-400">
+            <p>Rodapé</p>
+        </div>
+    )
+}
+
+export function Content( props: any ) {
+    return (
+        <div className="bg-blue-400">
+            {props.children}
         </div>
     )
 }
