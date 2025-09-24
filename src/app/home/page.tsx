@@ -6,11 +6,12 @@ export default function Page() {
             <Header
                 title="AirBnB"
                 subtitle="Início"
+                className="bg-cyan-700"
             />
 
             <Menu />
 
-            <Content>
+            <Content className="bg-blue-400">
                 <h2>Página Início</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

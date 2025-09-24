@@ -10,9 +10,16 @@ export function Accommodation() {
     )
 }
 
-export function Header( props: any ) {
+interface HeaderProps {
+    title: string,
+    subtitle: string,
+    className?: string
+}
+
+export function Header( props: HeaderProps ) {
+    const propsClass = props.className ?? ""
     return (
-        <div className="bg-teal-600">
+        <div className={"p-3 " + propsClass}>
             <p>{props.title}</p>
             <p>{props.subtitle}</p>
         </div>
@@ -31,7 +38,7 @@ export function Menu() {
 
 export function MenuItem( props: any ) {
     return (
-        <Link href={props.url} className="p-2">
+        <Link href={props.url} className="p-3">
             {props.text}
         </Link>
     )
@@ -45,9 +52,14 @@ export function Footer() {
     )
 }
 
-export function Content( props: any ) {
+interface ContentProps {
+    className: string,
+    children: any
+}
+
+export function Content( props: ContentProps ) {
     return (
-        <div className="bg-blue-400">
+        <div className={props.className + " p-3"}>
             {props.children}
         </div>
     )
