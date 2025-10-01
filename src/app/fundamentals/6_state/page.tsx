@@ -14,7 +14,7 @@ export default function Page() {
 
     return (
         <div>
-            <h1>Estados</h1>
+            <h1 className="myText">Estados</h1>
             <button
                 onClick={increment}
                 className="bg-blue-400 p-2"

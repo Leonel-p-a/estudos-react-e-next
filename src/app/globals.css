@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.myText {
+  @apply bg-green-300 text-black p-5 font-bold;
+  @apply hover:bg-purple-300;
+}
+
+.input-text {
+  @apply bg-gray-200 text-black p-1;
+  @apply rounded-sm placeholder:text-gray-500
+}
