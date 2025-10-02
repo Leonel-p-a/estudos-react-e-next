@@ -34,3 +34,8 @@ body {
   @apply bg-gray-200 text-black p-1;
   @apply rounded-sm placeholder:text-gray-500
 }
+
+.button {
+  @apply bg-blue-600 p-1;
+  @apply rounded-sm text-white hover:bg-blue-400;
+}
